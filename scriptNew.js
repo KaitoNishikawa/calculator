@@ -24,7 +24,7 @@ operatorButtons.forEach((button) =>
 button.addEventListener('click', () => setOperation(button.innerHTML))
 )
 
-function addValue(value){
+function addValue(value){ 
     if(shouldReset) displayCurrent.innerHTML = 0
 
     if(value == '.'){
@@ -38,7 +38,7 @@ function addValue(value){
         shouldReset = false
         return
         }
-    }    
+    }   
     displayCurrent.innerHTML += value
     currentInt = Number(displayCurrent.innerHTML)
     shouldReset = false
@@ -69,6 +69,7 @@ function deleteNumber(){
 }
 
 function setOperation(x){
+    isDecimal = false
     if(shouldReset){
         displayLast.innerHTML = currentInt + ' ' + x 
         operation = x
